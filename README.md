@@ -1,3 +1,4 @@
+> **Note:** `generations` and `Ghana` are done. I have yet to work on `BRCPP` and `PLCO` but their folders/files are setup in this repo for future work.
 
 # Dictionary Transformation Repository
 
