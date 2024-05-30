@@ -1,0 +1,112 @@
+﻿Data Type by Category,Variable Name,Data Source,Question Text,Variable Type,Variable Length,Derived variable macro Code,Format/Value,Core Variables added on 6/21/2019,
+Participant Recruitment/Enrollment Variables,,,,,,,,,
+Participant ID,PID,Master,PID: Participant ID ($6 no dash),Char,6,N/A,No format,Core,
+Recruitment Site,SITE,Master,"SITE: RTL: Site (KBTH, KATH, PLH)($)",Char,4,N/A,No format,Core,
+Case-Control Status,CASE_CONTROL,Master,CASE_CONTROL: RTL: Case or Control ($),Char,7,N/A,"Case
+Control",Core,
+Participant Eligibility,NCI_Eligible_ForAnalysis ,Master,"NCI_Eligible_forAnalysis: Eligible for NCI analyses (1=Yes if ELIGIBLE=Y and QUESTIONNAIRE=Y and NCI_ELIGIBILITY=blank, 0=Not eligible)",Num,8,N/A,"1=Yes (based on Eligible =Y and Questionnaire = Y and NCI_Elig_Change =blank);
+0=No (not eligible for analysis)",, 
+Demographic Data,,,,,,,,,
+Age at Interview,MAST_AGE,Master - Deduced,MAST_AGE: Age from the RTL/Reported in RFQ/Derived from RFQ date of birth and interview date (only if has a RFQ)( A=Age Unknown),Num,8,N/A, ,Core,
+,Age_cat       ,Derived - Master,Age_cat: Derived as age groupings specified by J. Thistle - Uses MAST_AGE.,Num,8,Age_cat       ,"0=18-34      
+1=35-44
+2 =45-54 
+3=55-74",Core,
+Education,Educ_cat      ,Derived - RFQ,Educ_cat: Derived as education groupings specified by J. Thistle,Num,8,Educ_cat      ,"0=No formal education
+1=Primary School  
+2=Junior Secondary School 
+3= Senior Secondary School and above
+9= Other",Core,
+Biopsy and Case Diagnosis Data,,,,,,,,,
+Final Case Diagnosis,CONSENSUS_DIAG,Master - Deduced,CONSENSUS_DIAG: Derived consensus diagnosis by algorithm based on Ghana diagnosis and H&E review,Char,18,N/A,"1)Invasive
+2)In-situ
+3)Benign
+4)Other Case Type
+9)Unconfirmed Case",, 
+Histology,CONSENSUS_HISTOLOGY,Master - Deduced,Consensus_Histology: Derived consensus histology based on Ghana and H&E histology,Char,100,N/A,"8032/3)Spindle cell carcinoma
+8200/3)Adenoid cystic ca
+8201/3)Cribriform carcinoma
+8315/3)Glycogen-rich clear cell carcinoma
+8480/3)Mucinous ca
+8500/2)Ductal ca in-situ
+8500/3)Inv ca NST
+8500/3)Inv ca NST w/medullary features
+8503/3)Invasive papillary ca
+8507/3)Invasive micropapillary carcinoma
+8507/3-1)Carcinoma w/apocrine differention
+8510/3)Medullary ca
+8513/3)Atypical medullary ca
+8520/3)Inv lobular ca w/subdx Classic lob
+8520/3)Inv lobular ca w/subdx Pleomorphic lob
+8520/3)Invasive lobular carcinoma
+8571/3)Metaplastic ca w/mesenchymal diff,osseous
+8575/3)Metaplastic ca of no special type
+8575/3)Other types of mesenchymal differ
+Carcinomatous cells on cytology
+Lymphoma
+Malignant without pathological confirmation
+Metastatic adenocarcinoma
+Paget's Disease
+Phylloides
+Sarcoma
+Unknown",Core,
+Grade,CONSENSUS_GRADE,Master - Deduced,Consensus_Grade: Derived consensus grade based on Ghana and H&E histology,Num,8,N/A,"1 = 1: Grade 1
+2 = 2: Grade 2
+3 = 3: Grade 3
+4 = 4: Unable to grade
+5 = 5: Not applicable
+9 = 9: Unknown",Core,
+Immunohistochemistry,Q6cImm,Abstract form,Q6cImm: AB C6c Estrogen receptor assay: Immunohistochemical result,Num,8,N/A,"1 = '1)Positive'
+2 = '2)Negative'",Core,
+,Q8cImm,Abstract form,Q8cImm: AB C8c Progesterone receptor assay: Immunohistochemical result,Num,8,N/A,"1 = '1)Positive'
+2 = '2)Negative'",Core,
+,Q10cImm,Abstract form,Q10cImm: AB C10c HER2 assay: Immunohistochemical result,Num,8,N/A,"1 = '1)Positive'
+2 = '2)Negative'
+3 = '3)Inconclusive'",Core,
+Risk Factors,,,,,,,,,
+Pregnancy and Breastfeeding History,GRID_B10_FTPREGS_NULLIP,Derived - RFQ,GRID_B10_FTPREGS_NULLIP: Nulliparous - no live births,Num,8,Pregnumb_NulliP,N/A,Core,
+,Pregnumb_w_cat,Derived - RFQ,Pregnumb_w_cat: Derived as specified by J. Thistle based on variable grid_b10_ftpregs,Num,8,Pregnumb_w_cat,"0=grid_b10_ftpregs = .B, 0
+1=grid_b10_ftpregs= 1,2 
+2=grid_b10_ftpregs= 3,4
+3=grid_b10_ftpregs=5 to 18
+9=grid_b10_ftpregs= .N                           ",Core,
+,FTPreg_FirstAge,Derived - RFQ,"FTPreg_FirstAge: Derived RFQ Age at end of first full-term pregnancy (derived from PregGrid date/reported age) or CQ B9 if PregGrid blank (live,mults count as one,stillbirths)",Num,8,RFQPregVars,".A=Not ascertained, a prev FT reg had no age/date 
+.B=Not applicable, no pregs and grid is all blank
+.F=No full term pregs
+.G=No ages or dates in gris for any FT pregs
+.N=Not ascertained, has pregs and grid is all blank",Core,
+,EVERBFED,Derived - RFQ,EVERBFED:  Breastfed greater than 1 month.,Num,8,EVERBFED: Derived using TotMos_BreastFed variable. Ever breastfed= Yes was  defined as having breastfed greater than 1 month. ,"0=No
+1=Yes
+9=Unknown",Core,
+,MEDBFSIXMO:,Derived - RFQ,MEDBFSIXMO: Median months breastfed.,Num,8,MEDBFSIXMO: Derived using  median of variables b6am- b6rm and categorized for denoted values. ,".=Missing
+0=<= 12 months
+1=13-18 months 
+2=>18 months
+9=Unknown",Core,
+,TotMos_BreastFed,Derived - RFQ,"TotMos_BreastFed: Derived RFQ Total #months breastfed (derived from PregGrid B6 responses)( B=No pregs, N=Has pregs but PregGrid blank, L=Has pregs but no live births)",Num,8,NBF_YES,"B=No pregs 
+N=Has pregs but PregGrid blank 
+L=Has pregs but no live births",Core,
+Menstrual History and Menopause,C1,RFQ form,C1: RFQ C1 Age at first menstrual period,Num,8,N/A,"Age in years
+98=never
+99=unknown
+",Core,
+,Menarche_cat,Derived - RFQ,Menarche_cat: Derived as specified by J. Thistle based on variable C1,Num,8,Menarche_cat  ,"0=5-14
+1=15
+2=16
+3=17-47  
+9=Dont know/Missing",, 
+,AGEATMENOP,Derived - RFQ,AGEATMENOP: Age at menopause,Num,8,"AGEATMENOP: Age at menopause derived from answer to C4 where value of 99 (not known) was recoded to missing. For women that were classified as premenopausal (see MENOP variable), this was set to missing. Women reporting surgical menopause the age at surgery (C5) was used as the age at menopause. Ourliers of women <30 were recoded as missing. ",N/A,Core,
+,MENOP,Derived - RFQ,MENOP: Menopause status,Num,8,"MENOP: Premenopausal status defined as yes if C3==1  variable or if BL_Q13==1, furthermore if women reported using contraceptives or birth control, they were classified as premenopausal using D1C-D4C if==1.  Postmenopausal women were defined as yes if C3==2 ot if BL_Q13==2. Women reporting surgical removal of ovaries were also classified as postmenopausal (C6=1 or C7=1) and were not classified as premenopausal as noted above. ","0=Premenopausal
+1=Postmenopausal
+9=Unknown",Core,
+,SURGEMENOP,Derived - RFQ,SURGEMENOP: Reported surgical removal of ovaries,Num,8,SURGEMENOP: Women reporting surgical removal of ovaries were indicated as yes using RFQ data C6=1 or C7=1,"0=No
+1=Yes
+9=Unknown",Core,
+Family History,Famhist       ,Derived - RFQ,Famhist: Derived as specified by J. Thistle based on variable H4,Num,8,Famhist       ,"0=No
+1= Yes
+9= Don't know/Missing   ",Core,
+Anthropometry/Bodysize,Bodysize_cat  ,Derived - RFQ,Bodysize_cat: Derived as specified by J. Thistle based on variable E7,Num,8,Bodysize_cat  ,"1,2 = Body silhouettes 1 and 2
+3,4 = Body silhouettes 3 and 4
+5,6 = Body silhouettes 5 and 6
+7,8,9 = Body silhouettes 7 ,8 and 9",Core,
+,E7,RFQ form,"E7: RFQ E7 Silhouette which best represents body shape for most of adult years from age of 18 (1=thin,9=heavy)",Num,8,N/A,"1 thin, 9=heavy",Core,

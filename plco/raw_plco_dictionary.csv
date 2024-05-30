@@ -1,0 +1,17 @@
+﻿Class,Variable,Label,Description,Format Text
+01. Principal,BMI,Body mass index at reference date in kg/ m2,,numeric
+,,,,"888=""DK"""
+01. Principal,height,Adult body height,,numeric
+,,,,"888=""DK"""
+01. Principal,sizechild,Childhood body fatness,,numeric
+,,,,"888=""DK"""
+01. Principal,WAIST,Waist circumference at reference date,,numeric
+,,,,"888=""DK"""
+01. Principal,waist_ageqx,Age at questionnaire used to provide waist at reference information,,numeric
+01. Principal,weight,Weight at at reference date,,numeric
+,,,,"888=""DK"""
+01. Principal,weightAdult,Adult body weight in early adulthood (age around 20),,numeric
+,,,,"888=""DK"""
+01. Principal,wt_age50,Weight in kg at age 50,,numeric
+,,,,"888=""DK"""
+01. Principal,wt_ageqx,Age at questionnaire used to provide weight at reference information,,numeric
