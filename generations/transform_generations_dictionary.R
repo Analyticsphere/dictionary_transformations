@@ -143,5 +143,5 @@ transform_generations_dictionary <- function(input_path, output_path) {
 
 # Example usage
 input_path <- "generations/raw_generations_dictionary.xlsx"  # or .csv
-output_path <- "generations/transformed_generations_dictionary.xlsx"  # or .csv
+output_path <- "generations/transformed_generations_dictionary.csv"  # or .csv
 df <- transform_generations_dictionary(input_path, output_path)

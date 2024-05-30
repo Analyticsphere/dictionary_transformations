@@ -134,6 +134,13 @@ transform_ghana_dictionary <- function(input_path, output_path) {
            QUESTION_SOURCE, QUESTION_NAME, 
            QUESTION_CORE)
   
+  # Convert list columns to atomic vectors before writing to CSV
+  for (col_name in names(df)) {
+    if (is.list(df[[col_name]])) {
+      df[[col_name]] <- sapply(df[[col_name]], paste, collapse = ", ")
+    }
+  }
+  
   # Write the transformed dataframe to the output path
   if (output_extension == "csv") {
     write.csv(df, output_path, row.names = FALSE)
@@ -147,5 +154,7 @@ transform_ghana_dictionary <- function(input_path, output_path) {
 }
 
 input_path  <- 'Ghana/raw_ghana_dictionary.csv'
-output_path <- 'Ghana/transformed_ghana_dictionary.xlsx'
+output_path <- 'Ghana/transformed_ghana_dictionary.csv'
 df <- transform_ghana_dictionary(input_path, output_path)
+
+dplyr::glimpse(df)
