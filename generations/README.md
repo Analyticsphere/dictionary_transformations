@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: sentence
----
-
 # Generations Dictionary Transformation
 
 This script transforms the "Generations Dictionary" into the "Connect Dictionary Format".
