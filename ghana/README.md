@@ -6,13 +6,13 @@ This script transforms the "Ghana Dictionary" into a standardized format. It rea
 ## Overview
 
 The script performs the following transformations:
-1. **Standardizes Column Names**: Converts column names to uppercase and trims whitespace.
-2. **Splits Multi-line Entries**: Splits entries in the `format_value` column into multiple rows based on newline characters.
-3. **Reconfigures "Format" and "Value" Entries**: 
+  1. **Standardizes Column Names**: Converts column names to uppercase and trims whitespace.
+  2. **Splits Multi-line Entries**: Splits entries in the `format_value` column into multiple rows based on newline characters.
+  3. **Reconfigures "Format" and "Value" Entries**: 
     - Splits and relocates entries from `format_value` into `RESPONSE_FORMAT` and `RESPONSE_VALUE` columns.
-4. **Removes Empty Rows**: Checks and removes rows where all entries are `NA`, `NULL`, or whitespace.
-5. **Detects and Handles Rows with Only First Column Filled**: Moves the value in the first column to `PRIMARY_KEY` of the subsequent row and removes the detected rows.
-6. **Renames Columns**: Renames columns to conform to a standardized format and drops unnecessary columns.
+  4. **Removes Empty Rows**: Checks and removes rows where all entries are `NA`, `NULL`, or whitespace.
+  5. **Detects and Handles Rows with Only First Column Filled**: Moves the value in the first column to `PRIMARY_KEY` of the subsequent row and removes the detected rows.
+  6. **Renames Columns**: Renames columns to conform to a standardized format and drops unnecessary columns.
 
 ## Specific Transformations
 
@@ -62,17 +62,5 @@ library(stringr)
 
 input_path <- "ghana/raw_ghana_dictionary.xlsx"  # or .csv
 output_path <- "ghana/transformed_ghana_dictionary.xlsx"  # or .csv
-df <- transform_dataframe(input_path, output_path)
+df <- transform_ghana_dicitonary(input_path, output_path)
 ```
-
-### Script Function
-
-```r
-transform_dataframe <- function(input_path, output_path) {
-  # Function body as provided earlier...
-}
-```
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE.md file for details.

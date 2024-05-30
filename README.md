@@ -21,19 +21,19 @@ Each subfolder within this repository contains:
 ```
 .
 ├── README.md
-├── BRCPP
+├── brcpp
 │   ├── README.md
 │   ├── raw_brcpp_dictionary.csv
 │   ├── raw_brcpp_dictionary.xlsx
 │   └── transform_brcpp_dictionary.R
-├── Ghana
+├── ghana
 │   ├── README.md
 │   ├── raw_ghana_dictionary.csv
 │   ├── raw_ghana_dictionary.xlsx
 │   ├── transform_ghana_dictionary.R
 │   ├── transformed_ghana_dictionary.xlsx
 │   └── transformed_ghana_dictionary.xlsx.xlsx
-├── PLCO
+├── plco
 │   ├── README.md
 │   ├── raw_plco_dictionary.csv
 │   ├── raw_plco_dictionary.xlsx
