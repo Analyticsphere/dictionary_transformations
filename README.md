@@ -32,8 +32,8 @@ Each subfolder within this repository contains:
 │   ├── raw_ghana_dictionary.csv
 │   ├── raw_ghana_dictionary.xlsx
 │   ├── transform_ghana_dictionary.R
-│   ├── transformed_ghana_dictionary.xlsx
-│   └── transformed_ghana_dictionary.xlsx.xlsx
+│   ├── transformed_ghana_dictionary.csv
+│   └── transformed_ghana_dictionary.xlsx
 ├── plco
 │   ├── README.md
 │   ├── raw_plco_dictionary.csv
@@ -44,5 +44,6 @@ Each subfolder within this repository contains:
     ├── raw_generations_dictionary.csv
     ├── raw_generations_dictionary.xlsx
     ├── transform_generations_dictionary.R
+    ├── transformed_generations_dictionary.csv
     └── transformed_generations_dictionary.xlsx
 ```
